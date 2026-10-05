@@ -1,0 +1,17 @@
+import cv2
+import os
+imagestore1=cv2.imread(r'C:\Python\Python\open cv\vibrant image1.jpg')
+imagestore2=cv2.imread(r'C:\Python\Python\open cv\vibrant image2.jpg')
+cv2.imshow('original image1',imagestore1)
+cv2.waitKey(0)
+cv2.imshow('original image2',imagestore2)
+cv2.waitKey(0)
+resize1=cv2.resize(imagestore1,(500,500))
+cv2.imshow('resized image of original 1',resize1)
+cv2.waitKey(0)
+resize2=cv2.resize(imagestore2,(500,500))
+cv2.imshow('resized image of original 2',resize2)
+cv2.waitKey(0)
+sumstore=cv2.addWeighted(resize1,0.4,resize2,0.6,0)
+cv2.imshow('both images added thogether',sumstore)
+cv2.waitKey(0)
